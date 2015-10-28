@@ -38,12 +38,12 @@ amd:
 define("<%= name %>", [], function(){ var cache = window.cache; <%= contents %> });
 ```
 
-angularTemplateCache:
+angular template cache:
 ```js
 angular.module("<%= name %>").run(["$templateCache", function(cache) {<%= contents %> }]);
 ```
 
-angularHttpCache:
+angular http cache:
 ```js
 angular.module("<%= name %>").run(["$cacheFactory", function($cacheFactory) {var cache = $cacheFactory.get("$http"); <%= contents %> }]);
 ```
