@@ -12,7 +12,9 @@ npm install gulp-resource-cache
 
 ```js
 gulp.src('*.html')
-    .pipe(gulpResourceCache({wrapperTpl: 'function(){ var cache = window.cache; <%= contents %> }', name: 'templates.html'}))
+    .pipe(gulpResourceCache({wrapperTpl: 'function(){\
+        var cache = window.cache; <%= contents %>\
+        }', name: 'templates.html'}))
     .pipe(gulp.dest('compiled'));
 ```
 
@@ -29,10 +31,10 @@ function(){ var cache = window.cache;
 Note: you need defined `cache.put` method in your application.
 
 You can define `wrapperTpl` for any case and any frameworks.
-    amd:                  `define("<%= name %>", [], function(){ var cache = window.cache; <%= contents %> });`
-    angularTemplateCache: `angular.module("<%= name %>").run(["$templateCache", function(cache) {<%= contents %> }]);`,
-    angularHttpCache:     `angular.module("<%= name %>").run(["$cacheFactory", function($cacheFactory) {var cache = $cacheFactory.get("$http"); <%= contents %> }]);`,
-    etc.
+- amd:                  `define("<%= name %>", [], function(){ var cache = window.cache; <%= contents %> });`
+- angularTemplateCache: `angular.module("<%= name %>").run(["$templateCache", function(cache) {<%= contents %> }]);`,
+- angularHttpCache:     `angular.module("<%= name %>").run(["$cacheFactory", function($cacheFactory) {var cache = $cacheFactory.get("$http"); <%= contents %> }]);`,
+- etc.
         
 
 ## API
