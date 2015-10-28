@@ -1,0 +1,34 @@
+{
+  "name": "gulp-resource-cache",
+  "description": "Concatenating and wrapping resources to cache",
+  "version": "0.0.1",
+  "author": {
+    "name": "tamtakoe",
+    "email": "tamtakoe@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tamtakoe/gulp-resource-cache.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "resource",
+    "cache",
+    "template",
+    "http",
+    "angular"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "js-string-escape": "^1.0.0"
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
